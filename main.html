@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" id="change" href="./Css/style.css">
+    <script src="./Javascript/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="personal_form" action="" method="post">
+            <h1>Datos Personales:</h1>
+    
+            <label for="name">Nombre:</label>
+            <input type="text" name="user_name" id="name" autocomplete="given-name" required>
+    
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="user_apellido" id="apellido" autocomplete="family-name" required>
+    
+            <label for="email">Email:</label>
+            <input type="text" name="user_email" id="email" autocomplete="email">
+            <span id="email_error" class="message_error"></span>
+    
+    
+            <label for="fecha">Fecha de nacimiento:</label>
+            <input type="date" id="fecha" autocomplete="bday" required>
+    
+            <label for="pais">Pais de residencia:</label>
+            <input type="text" name="pais_recidencia" id="pais" autocomplete="country" required>
+    
+            <input type="submit" value="enviar">
+    
+            
+        </form>
+    
+        <div class="change_theme">
+            <button id="normal" class="theme_button">Estilo normal</button>
+            <button id="high_contrast" class="theme_button"> Alto contraste</button>
+        </div>
+    </div>
+</body>
+</html>
