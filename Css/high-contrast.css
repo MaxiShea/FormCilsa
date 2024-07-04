@@ -1,3 +1,5 @@
+/* high-contrast.css */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #000;
@@ -7,36 +9,40 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .container {
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 380px; /* Ajustar ancho máximo */
+    text-align: center;
 }
 
 form {
-    background: #000;
-    padding: 20px;
+    background: #222;
+    padding: 10px 15px; /* Ajustar padding */
     border-radius: 8px;
-    border: 2px solid #fff;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    border: 2px solid #ff0; /* Agregar borde */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     width: 100%;
-    /* margin: 20px auto; */
+    box-sizing: border-box;
+    margin: 10px 0; /* Asegurar margen igual */
 }
 
 h1 {
-    font-size: 24px;
-    padding-top: 25px;
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin: 10px 0 15px 0;
     color: #ff0;
+    text-transform: uppercase;
 }
 
 label {
     display: block;
-    margin-top: 15px;
+    margin: 8px 0 5px 0;
     font-weight: bold;
     text-align: left;
     color: #ff0;
@@ -47,9 +53,8 @@ input[type="email"],
 input[type="date"] {
     width: calc(100% - 20px);
     padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 2px solid #fff;
+    margin: 5px 0 10px 0;
+    border: 2px solid #ff0;
     border-radius: 4px;
     background-color: #333;
     color: #fff;
@@ -59,15 +64,15 @@ input[type="date"] {
 
 input[type="submit"] {
     width: 100%;
-    padding: 12px;
+    padding: 8px; /* Ajustar padding */
     background-color: #ff0;
     color: #000;
     border: none;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 14px; /* Ajustar tamaño de fuente */
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 input[type="submit"]:hover {
@@ -75,27 +80,19 @@ input[type="submit"]:hover {
 }
 
 .theme_button {
-    padding: 10px 20px;
-    font-size: 14px;
+    padding: 8px 15px; /* Ajustar padding */
+    font-size: 14px; /* Ajustar tamaño de fuente */
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    background-color: #333;
-    color: #fff;
+    background-color: #ff0;
+    color: #000;
     transition: background-color 0.3s;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .theme_button:hover {
-    background-color: #555;
-}
-
-.change_theme {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
+    background-color: #ffcc00;
 }
 
 .message_error {
@@ -106,14 +103,12 @@ input[type="submit"]:hover {
     text-align: center;
 }
 
-/* Alinear el botón "Enviar" al centro verticalmente */
-form {
+.change_theme {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-
-input[type="submit"] {
-    align-self: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding-bottom: 10px; /* Añadir espacio al final */
 }
 
