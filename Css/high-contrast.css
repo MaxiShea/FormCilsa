@@ -26,7 +26,7 @@ form {
     background: #222;
     padding: 10px 15px; /* Ajustar padding */
     border-radius: 8px;
-    border: 2px solid #ff0; /* Agregar borde */
+    border: 2px solid #ff0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     width: 100%;
     box-sizing: border-box;
@@ -110,5 +110,22 @@ input[type="submit"]:hover {
     gap: 10px;
     margin-top: 15px;
     padding-bottom: 10px; /* Añadir espacio al final */
+}
+
+.success-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1000;
+    display: none; /* Inicialmente oculto */
+}
+
+.success-message.high-contrast {
+    background-color: #ff0;
+    color: #000;
 }
 

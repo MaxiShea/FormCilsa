@@ -109,3 +109,22 @@ input[type="submit"]:hover {
     margin-top: 15px;
     padding-bottom: 10px; /* Añadir espacio al final */
 }
+
+.success-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1000;
+    display: none; /* Inicialmente oculto */
+}
+
+.success-message.normal {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
