@@ -1,78 +1,54 @@
-/* high-contrast.css */
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #000;
     color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0 10px;
-    box-sizing: border-box;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 380px; /* Ajustar ancho máximo */
-    text-align: center;
-}
-
-form {
-    background: #222;
-    padding: 10px 15px; /* Ajustar padding */
+    max-width: 400px; /* Ajustar ancho máximo del formulario */
+    margin: auto; /* Centrar el contenido */
+    background-color: #222;
+    padding: 20px;
     border-radius: 8px;
-    border: 2px solid #ff0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    width: 100%;
-    box-sizing: border-box;
-    margin: 10px 0; /* Asegurar margen igual */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 20px;
-    margin: 10px 0 15px 0;
+    font-size: 24px;
     color: #ff0;
     text-transform: uppercase;
+    margin-top: 0; /* Ajustar margen superior del título */
 }
 
 label {
-    display: block;
-    margin: 8px 0 5px 0;
     font-weight: bold;
-    text-align: left;
     color: #ff0;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="date"] {
-    width: calc(100% - 20px);
-    padding: 8px;
-    margin: 5px 0 10px 0;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
     border: 2px solid #ff0;
     border-radius: 4px;
     background-color: #333;
     color: #fff;
-    font-size: 14px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Incluir padding y border en el ancho total */
 }
 
 input[type="submit"] {
     width: 100%;
-    padding: 8px; /* Ajustar padding */
+    padding: 10px;
     background-color: #ff0;
     color: #000;
     border: none;
     border-radius: 4px;
-    font-size: 14px; /* Ajustar tamaño de fuente */
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 10px;
 }
 
 input[type="submit"]:hover {
@@ -80,8 +56,8 @@ input[type="submit"]:hover {
 }
 
 .theme_button {
-    padding: 8px 15px; /* Ajustar padding */
-    font-size: 14px; /* Ajustar tamaño de fuente */
+    padding: 10px 20px;
+    font-size: 16px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -95,37 +71,19 @@ input[type="submit"]:hover {
     background-color: #ffcc00;
 }
 
-.message_error {
-    color: #ff0;
-    font-size: 14px;
-    display: none;
-    margin-top: 5px;
-    text-align: center;
-}
-
-.change_theme {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 15px;
-    padding-bottom: 10px; /* Añadir espacio al final */
-}
-
 .success-message {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    z-index: 1000;
-    display: none; /* Inicialmente oculto */
-}
-
-.success-message.high-contrast {
+    display: none;
     background-color: #ff0;
     color: #000;
 }
+
+.btn-high-contrast {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.btn-high-contrast:hover {
+    background-color: #1d2124;
+}
+
 

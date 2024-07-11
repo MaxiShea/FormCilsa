@@ -1,40 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Formulario de Registro</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" id="change" href="./Css/style.css">
-    <script src="./Javascript/main.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <form id="personal_form" action="" method="post">
-            <h1>Datos Personales:</h1>
-    
-            <label for="name">Nombre:</label>
-            <input type="text" name="user_name" id="name" autocomplete="given-name" required>
-    
-            <label for="apellido">Apellido:</label>
-            <input type="text" name="user_apellido" id="apellido" autocomplete="family-name" required>
-    
-            <label for="email">Email:</label>
-            <input type="text" name="user_email" id="email" autocomplete="email">
-            <span id="email_error" class="message_error"></span>
-    
-            <label for="fecha">Fecha de nacimiento:</label>
-            <input type="date" id="fecha" autocomplete="bday" required>
-    
-            <label for="pais">País de residencia:</label>
-            <input type="text" name="pais_recidencia" id="pais" autocomplete="country" required>
-    
-            <input type="submit" id="submit_button" value="Enviar">
-        </form>
-    
-        <div class="change_theme">
-            <button id="normal" class="theme_button">Estilo normal</button>
-            <button id="high_contrast" class="theme_button">Alto contraste</button>
+    <div class="container-fluid p-0">
+        <div class="container">
+            <form id="personal_form" action="" method="post" class="needs-validation" novalidate>
+                <h1 class="mb-4 text-center">Datos Personales:</h1>
+
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" class="form-control" name="user_name" id="name" autocomplete="given-name"
+                        required>
+                    <div class="invalid-feedback">El nombre es obligatorio.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" class="form-control" name="user_apellido" id="apellido"
+                        autocomplete="family-name" required>
+                    <div class="invalid-feedback">El apellido es obligatorio.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" name="user_email" id="email" autocomplete="email" required>
+                    <div class="invalid-feedback">Ingrese un correo electrónico válido.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha">Fecha de nacimiento:</label>
+                    <input type="date" class="form-control" id="fecha" autocomplete="bday" required>
+                    <div class="invalid-feedback">La fecha de nacimiento es obligatoria.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pais">País de residencia:</label>
+                    <input type="text" class="form-control" name="pais_recidencia" id="pais" autocomplete="country"
+                        required>
+                    <div class="invalid-feedback">El país de residencia es obligatorio.</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block mt-4" id="submit_button">Enviar</button>
+            </form>
+
+            <div class="success-message alert alert-success mt-3 text-center" style="display: none;">Mensaje enviado
+            </div>
         </div>
+
+        <div class="change_theme text-center mt-3">
+            <button id="normal" class="theme_button btn btn-primary">Estilo normal</button>
+            <button id="high_contrast" class="theme_button btn btn-secondary">Alto contraste</button>
+        </div>
+
+
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./Javascript/main.js"></script>
 </body>
+
 </html>
